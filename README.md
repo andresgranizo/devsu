@@ -31,6 +31,8 @@ The `apiTest` folder contains automated tests for the PetStore API. These tests 
     ```sh
     npx cypress open
     ```
+* Start E2E testing in Chrome
+* Run tests (api-restspec.cy.js)
 
 ## teste2e
 
@@ -53,6 +55,8 @@ The `teste2e` folder contains end-to-end (E2E) automated tests for the Demoblaze
     ```sh
     npx cypress open
     ```
+* Start E2E testing in Chrome
+* Run tests (spec.cy.js)
 
 For more details on how to run the tests and the covered test cases, refer to the `README.md` file inside the `teste2e` folder.
 
