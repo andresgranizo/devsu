@@ -31,10 +31,29 @@ The `apiTest` folder contains automated tests for the PetStore API. These tests 
     npx cypress open
     ```
 
-For more details on how to run the tests and the covered test cases, refer to the `README.md` file inside the `apiTest` folder or `teste2e` folder as well.
+## teste2e
 
----
+The `teste2e` folder contains end-to-end (E2E) automated tests for the Demoblaze website. These tests cover user flows such as adding products to the cart, verifying the cart, and placing an order.
+
+### Instructions
+
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/andresgranizo/devsu.git
+    cd devsu/teste2e
+    ```
+
+2. Install dependencies:
+    ```sh
+    npm install
+    ```
+
+3. Run the tests:
+    ```sh
+    npx cypress open
+    ```
+
+For more details on how to run the tests and the covered test cases, refer to the `README.md` file inside the `teste2e` folder.
 
 ### Contact
-
 If you have any questions or need more information, feel free to contact me through my [GitHub profile](https://github.com/andresgranizo).
