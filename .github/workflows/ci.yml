@@ -24,7 +24,7 @@ jobs:
       working-directory: ./teste2e
 
     - name: Run Cypress tests
-      run: npx cypress run
+      run: npx cypress run 2> /dev/null
       working-directory: ./teste2e
 
   api_tests:
@@ -48,5 +48,5 @@ jobs:
       working-directory: ./apiTest
 
     - name: Run Cypress tests
-      run: npx cypress run
+      run: npx cypress run 2> /dev/null
       working-directory: ./apiTest
