@@ -1,5 +1,7 @@
 # Devsu Test
 
+[![CI](https://github.com/andresgranizo/devsu/actions/workflows/ci.yml/badge.svg)](https://github.com/andresgranizo/devsu/actions/workflows/ci.yml)
+
 This repository contains automated testing projects for Devsu. The projects are divided into two main folders: `apiTest` and `teste2e`.
 
 ## Contents

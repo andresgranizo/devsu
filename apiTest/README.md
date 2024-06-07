@@ -1,5 +1,7 @@
 # Api Rest Tests
 
+[![CI](https://github.com/andresgranizo/devsu/actions/workflows/ci.yml/badge.svg)](https://github.com/andresgranizo/devsu/actions/workflows/ci.yml)
+
 This repository contains Api Rest tests using Cypress for the web application [PetStore](https://petstore.swagger.io/).
 
 ## Prerequisites
