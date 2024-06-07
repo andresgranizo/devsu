@@ -31,7 +31,7 @@ The `apiTest` folder contains automated tests for the PetStore API. These tests 
     npx cypress open
     ```
 
-For more details on how to run the tests and the covered test cases, refer to the `README.md` file inside the `apiTest` folder.
+For more details on how to run the tests and the covered test cases, refer to the `README.md` file inside the `apiTest` folder or `teste2e` folder as well.
 
 ---
 
