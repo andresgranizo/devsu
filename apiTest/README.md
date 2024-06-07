@@ -10,7 +10,7 @@ This repository contains Api Rest tests using Cypress for the web application [P
 
 1. Clone the repository:
    ```bash
-   git clone [<REPO-URL>](https://github.com/andresgranizo/devsu.git)
+   git clone https://github.com/andresgranizo/devsu.git
 
 2. Install Dependencies
    * npm install
