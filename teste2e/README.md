@@ -10,9 +10,7 @@ This repository contains E2E tests using Cypress for the web application [DemoBl
 
 1. Clone the repository:
    ```bash
-   git clone <REPO-URL>
-   cd <REPO-NAME>
-   cd e2e-tests
+   git clone https://github.com/andresgranizo/devsu.git
 
 2. Install Dependencies
    * npm install
