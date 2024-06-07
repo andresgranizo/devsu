@@ -1,25 +1,32 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('addProductToCart', (productId) => {
+    cy.visit(`https://www.demoblaze.com/prod.html?idp_=${productId}`);
+    cy.get('.btn-success').contains('Add to cart').click();
+    cy.on('window:alert', (text) => {
+        expect(text).to.contains('Product added');
+    });
+});
+
+Cypress.Commands.add('verifyCartProductCount', (expectedCount) => {
+    cy.visit('https://www.demoblaze.com/cart.html');
+    cy.wait(2000); // Ensure the cart is fully loaded
+    cy.get('tbody', { timeout: 10000 }).find('tr.success').should('have.length.greaterThan', expectedCount);
+});
+
+Cypress.Commands.add('placeOrder', (orderDetails) => {
+    cy.visit('https://www.demoblaze.com/cart.html#');
+    cy.wait(2000); // Ensure the cart is fully loaded
+    cy.get('button[data-target="#orderModal"]').should('be.visible').contains('Place Order').click();
+    cy.wait(1000); // Wait for the form to be visible
+
+    cy.get('#name').type(orderDetails.name);
+    cy.get('#country').type(orderDetails.country);
+    cy.get('#city').type(orderDetails.city);
+    cy.get('#card').type(orderDetails.card);
+    cy.get('#month').type(orderDetails.month);
+    cy.get('#year').type(orderDetails.year);
+
+    cy.contains('Purchase').click();
+
+    cy.get('.sweet-alert').should('be.visible');
+    cy.get('.sweet-alert').contains('Thank you for your purchase!');
+});
