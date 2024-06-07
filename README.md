@@ -24,6 +24,7 @@ The `apiTest` folder contains automated tests for the PetStore API. These tests 
 2. Install dependencies:
     ```sh
     npm install
+    npm install cypress --save-dev
     ```
 
 3. Run the tests:
